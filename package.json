@@ -1,0 +1,28 @@
+{
+  "name": "node-workshop-2",
+  "version": "0.0.1",
+  "description": "Second workshop for Node",
+  "main": "cps.js",
+  "dependencies": {
+    "node": "^0.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karlysun/node-workshop-2.git"
+  },
+  "keywords": [
+    "workshop",
+    "node",
+    "nodejs"
+  ],
+  "author": "Karl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karlysun/node-workshop-2/issues"
+  },
+  "homepage": "https://github.com/karlysun/node-workshop-2"
+}
