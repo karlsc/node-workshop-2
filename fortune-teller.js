@@ -1,3 +1,10 @@
 var fortune = require('./library/fortune.js');
 
-console.log(fortune.getFortune());
+var numOfFortunes = process.argv[2];
+
+for(var i = 0 ; i < numOfFortunes ; i++){
+    
+    console.log(fortune.getFortune());
+}
+
+
