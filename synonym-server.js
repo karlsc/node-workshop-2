@@ -15,8 +15,9 @@ var requestListener = function (req, response) {
         
             if(result){
                 var format = JSON.parse(body);
-                var nounSyn = ((format.noun.syn).map(function(x) { return x[0].toUpperCase() + x.slice(1); })).join(", ");
-                var verbSyn = ((format.verb.syn).map(function(x) { return x[0].toUpperCase() + x.slice(1); })).join(", ");
+                var nounSyn = toJoin(format.noun.syn);
+                var verbSyn = toJoin(format.verb.syn);
+                
                 response.writeHead(200);
                 response.end("Noun synonyms:\n"+nounSyn+".\n\nVerb synonyms:\n"+verbSyn+".");
             } else {
@@ -26,6 +27,10 @@ var requestListener = function (req, response) {
         }    
     });
 };
+
+function toJoin(y){
+    return y.map(function(x){ return x[0].toUpperCase() + x.slice(1);}).join(", ");
+}
 
 var server = http.createServer(requestListener);
 
